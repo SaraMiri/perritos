@@ -1,12 +1,18 @@
-//PARTE 1 //
 start();
 
 function start() {
   document.querySelector(".add-doggo").addEventListener("click", onClick);
+  document
+    .querySelector(".list-of-breeds")
+    .addEventListener("click", onClickBreeds);
 }
 
 function onClick(x) {
   const RANDOM_DOG_URL = "https://dog.ceo/api/breeds/image/random";
+
+  function onClickBreeds() {
+    const LIST_OF_BREEDS = "https://dog.ceo/api/breed/hound/images";
+  }
 
   fetch(RANDOM_DOG_URL)
     .then(toJSON)
@@ -26,9 +32,4 @@ function createImage(dogUrl) {
   img.alt = "Perrito bonito";
   img.src = dogUrl;
   return img;
-}
-
-//PARTE 2//
-function addBreed() {
-  document.querySelector(".list-of-breeds").addEventListener("click", onList);
 }
