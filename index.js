@@ -19,6 +19,8 @@ function onClickRandom(x) {
 
 function onClickBreeds() {
   const LIST_OF_BREEDS = "https://dog.ceo/api/breed/hound/images";
+
+  fetch(LIST_OF_BREEDS).then(toJSON);
 }
 
 function toJSON(apiResponse) {
