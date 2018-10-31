@@ -24,8 +24,17 @@ function onClickBreeds() {
     .then(toJSON)
     .then(function(jsonResponse) {
       const breeds = jsonResponse.message;
-      console.log(breeds);
     });
+
+  /*
+  <div class="List-of-breeds">
+    <label for="breed-select">Choose a breed</label>
+    <select id="breed-select">
+      <option value="option">Choose an option</option>
+      <option value="affenpinscher">Affenpinscher</option>
+    </select>
+    </div>
+    */
 }
 
 function toJSON(apiResponse) {
@@ -42,4 +51,8 @@ function createImage(dogUrl) {
   img.alt = "Perrito bonito";
   img.src = dogUrl;
   return img;
+}
+
+function createList(dogList) {
+  const select = document.createElement("select");
 }
