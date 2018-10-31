@@ -34,7 +34,11 @@ function onClickBreeds() {
       const select = document.createElement("select");
       select.id = "breed-select";
       document.querySelector("#list-of-breeds").appendChild(select);
-      console.log(select);
+
+      const option = document.createElement("option");
+      option.value = "";
+      option.innerText = "Choose an option";
+      document.querySelector("#breed-select").appendChild(option);
     });
 
   /*
