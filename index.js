@@ -10,14 +10,15 @@ function start() {
 function onClick(x) {
   const RANDOM_DOG_URL = "https://dog.ceo/api/breeds/image/random";
 
-  function onClickBreeds() {
-    const LIST_OF_BREEDS = "https://dog.ceo/api/breed/hound/images";
-  }
-
   fetch(RANDOM_DOG_URL)
     .then(toJSON)
     .then(appendImgToDOM);
 }
+
+function onClickBreeds() {
+  const LIST_OF_BREEDS = "https://dog.ceo/api/breed/hound/images";
+}
+
 function toJSON(apiResponse) {
   return apiResponse.json();
 }
