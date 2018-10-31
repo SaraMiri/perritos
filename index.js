@@ -24,10 +24,15 @@ function onClickBreeds() {
     .then(toJSON)
     .then(function(jsonResponse) {
       const breeds = jsonResponse.message;
+      const label = document.createElement("label");
+      label.htmlFor = "breed-select";
+      label.innerText = "Choose a breed";
+      //console.log(label);
+      document.querySelector("#list-of-breeds").appendChild(label);
     });
 
   /*
-  <div class="List-of-breeds">
+  <section id="list-of-breeds"></section>
     <label for="breed-select">Choose a breed</label>
     <select id="breed-select">
       <option value="option">Choose an option</option>
