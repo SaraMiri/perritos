@@ -39,7 +39,17 @@ function onClickBreeds() {
       option.value = "";
       option.innerText = "Choose an option";
       document.querySelector("#breed-select").appendChild(option);
+
+      const razas = Object.keys(breeds);
+      const option2 = document.createElement("option");
+      option2.value = razas[76];
+      option2.innerText = capitalizeFirstLetter(razas[76]);
+      document.querySelector("#breed-select").appendChild(option2);
     });
+
+  function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
 
   /*
   <section id="list-of-breeds"></section>
