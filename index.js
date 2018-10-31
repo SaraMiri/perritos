@@ -24,6 +24,8 @@ function onClickBreeds() {
     .then(toJSON)
     .then(function(jsonResponse) {
       const breeds = jsonResponse.message;
+
+      // TO DO: Funcion CreateLabel de las siguientes líneas
       const label = document.createElement("label");
       label.htmlFor = "breed-select";
       label.innerText = "Choose a breed";
