@@ -1,7 +1,9 @@
 start();
 
 function start() {
-  document.querySelector(".add-doggo").addEventListener("click", onClickRandom);
+  document
+    .querySelector(".add-random-doggo")
+    .addEventListener("click", onClickRandom);
   document
     .querySelector(".list-of-breeds")
     .addEventListener("click", onClickBreeds);
