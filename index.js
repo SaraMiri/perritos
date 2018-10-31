@@ -18,7 +18,7 @@ function onClickRandom(x) {
 }
 
 function onClickBreeds() {
-  const LIST_OF_BREEDS = "https://dog.ceo/api/breed/hound/images";
+  const LIST_OF_BREEDS = "https://dog.ceo/api/breeds/list/all";
 
   fetch(LIST_OF_BREEDS).then(toJSON);
 }
