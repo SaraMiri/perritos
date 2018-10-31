@@ -1,3 +1,4 @@
+//PARTE 1 //
 start();
 
 function start() {
@@ -25,4 +26,9 @@ function createImage(dogUrl) {
   img.alt = "Perrito bonito";
   img.src = dogUrl;
   return img;
+}
+
+//PARTE 2//
+function addBreed() {
+  document.querySelector(".list-of-breeds").addEventListener("click", onList);
 }
